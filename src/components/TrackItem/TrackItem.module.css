@@ -1,0 +1,9 @@
+.trackContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.thumbnail {
+  height: 48px;
+}
