@@ -1,9 +1,21 @@
 .trackContainer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 24px;
+  background-color: rgb(249 249 249);
+  border-radius: 24px;
+  padding-right: 24px;
 }
 
 .thumbnail {
-  height: 48px;
+  height: 64px;
+  border: 12px;
+  border-radius: 24px;
+}
+
+.trackName {
+  width: max-content;
+  font-size: 16px;
+  font-weight: 700;
 }

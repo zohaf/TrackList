@@ -1,22 +1,28 @@
 import React from "react";
 import styles from "./TrackItem.module.css";
-import green from "../../images/green.png";
 import IconButton from "@mui/material/IconButton";
 import { FavoriteBorder, PlayCircle } from "@mui/icons-material";
 
-type Props = {};
+type Props = {
+  trackName: string;
+  thumbnail: string;
+};
 
-export const TrackItem = (props: Props) => {
+const onLike = (name: string) => {
+  alert(`${name} liked`);
+};
+
+export const TrackItem = ({ trackName, thumbnail }: Props) => {
   return (
     <div className={styles.trackContainer}>
-      <img src={green} alt="thumbnail" className={styles.thumbnail} />
-      <h2>Song Name</h2>
+      <img src={thumbnail} alt="thumbnail" className={styles.thumbnail} />
+      <h2 className={styles.trackName}>{trackName}</h2>
       <div>
         <IconButton aria-label="delete">
           <PlayCircle />
         </IconButton>
         <IconButton aria-label="delete">
-          <FavoriteBorder />
+          <FavoriteBorder onClick={() => onLike(trackName)} />
         </IconButton>
       </div>
     </div>
